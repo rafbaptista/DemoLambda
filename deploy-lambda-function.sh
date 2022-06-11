@@ -1,0 +1,1 @@
+dotnet-lambda deploy-function LambdaDemo --function-role lambda-role
