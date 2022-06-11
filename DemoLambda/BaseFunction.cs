@@ -1,4 +1,5 @@
-﻿using DemoLambda.Application.Factories;
+﻿using Amazon.S3;
+using DemoLambda.Application.Factories;
 using DemoLambda.Application.Interfaces;
 using DemoLambda.Application.Services;
 using Microsoft.Extensions.Configuration;
@@ -51,6 +52,7 @@ namespace DemoLambda
         private static IServiceCollection RegisterServices(IServiceCollection services)
         {
             services.AddScoped<IFunctionService, FunctionService>();
+            services.AddAWSService<IAmazonS3>();
             return services;
         }
 
